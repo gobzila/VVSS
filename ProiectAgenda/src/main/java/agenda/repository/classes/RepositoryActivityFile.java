@@ -1,4 +1,4 @@
-package agenda.model.repository.classes;
+package agenda.repository.classes;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,12 +11,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import agenda.model.base.Activity;
-import agenda.model.repository.interfaces.RepositoryActivity;
-import agenda.model.repository.interfaces.RepositoryContact;
+import agenda.repository.interfaces.RepositoryActivity;
+import agenda.repository.interfaces.RepositoryContact;
 
 public class RepositoryActivityFile implements RepositoryActivity{
 
-	private static final String filename = "bin\\files\\activities.dat"; 
+	private static final String filename = "files/activities.txt";
 	private List<Activity> activities;
 	
 	public RepositoryActivityFile(RepositoryContact repcon) throws Exception

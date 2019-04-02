@@ -8,8 +8,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import agenda.model.base.Activity;
-import agenda.model.repository.classes.RepositoryActivityMock;
-import agenda.model.repository.interfaces.RepositoryActivity;
+import agenda.repository.classes.RepositoryActivityMock;
+import agenda.repository.interfaces.RepositoryActivity;
 
 import org.junit.Before;
 import org.junit.Test;
