@@ -1,4 +1,4 @@
-package agenda.model.repository.interfaces;
+package agenda.repository.interfaces;
 
 import java.util.Date;
 import java.util.List;

@@ -13,12 +13,12 @@ import agenda.exceptions.InvalidFormatException;
 import agenda.model.base.Activity;
 import agenda.model.base.Contact;
 import agenda.model.base.User;
-import agenda.model.repository.classes.RepositoryActivityFile;
-import agenda.model.repository.classes.RepositoryContactFile;
-import agenda.model.repository.classes.RepositoryUserFile;
-import agenda.model.repository.interfaces.RepositoryActivity;
-import agenda.model.repository.interfaces.RepositoryContact;
-import agenda.model.repository.interfaces.RepositoryUser;
+import agenda.repository.classes.RepositoryActivityFile;
+import agenda.repository.classes.RepositoryContactFile;
+import agenda.repository.classes.RepositoryUserFile;
+import agenda.repository.interfaces.RepositoryActivity;
+import agenda.repository.interfaces.RepositoryContact;
+import agenda.repository.interfaces.RepositoryUser;
 
 //functionalitati
 //F01.	 adaugarea de contacte (nume, adresa, numar de telefon, adresa email);
@@ -74,7 +74,7 @@ public class MainClass {
 			// System.out.println(a.toString());
 
 		} catch (Exception e) {
-
+			System.out.println(e);
 		}
 		System.out.println("Program over and out\n");
 	}

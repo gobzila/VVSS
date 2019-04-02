@@ -1,4 +1,4 @@
-package agenda.model.repository.classes;
+package agenda.repository.classes;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,11 +11,11 @@ import java.util.List;
 
 import agenda.exceptions.InvalidFormatException;
 import agenda.model.base.Contact;
-import agenda.model.repository.interfaces.RepositoryContact;
+import agenda.repository.interfaces.RepositoryContact;
 
 public class RepositoryContactFile implements RepositoryContact {
 
-	private static final String filename = "bin\\files\\contacts.txt"; 
+	private static final String filename = "files/contacts.txt";
 	private List<Contact> contacts;
 
 	public RepositoryContactFile() throws Exception {
@@ -31,7 +31,7 @@ public class RepositoryContactFile implements RepositoryContact {
 			while ((line = br.readLine()) != null) {
 				Contact c = null;
 				try {
-					c = Contact.fromString(line, " ");
+					c = Contact.fromString(line, "#");
 				} catch (InvalidFormatException e) {
 					throw new Exception("Error in file at line " + i,
 							new Throwable(e.getCause().getMessage()));

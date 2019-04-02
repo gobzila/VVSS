@@ -1,4 +1,4 @@
-package agenda.model.repository.classes;
+package agenda.repository.classes;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,12 +10,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import agenda.model.base.User;
-import agenda.model.repository.interfaces.RepositoryUser;
+import agenda.repository.interfaces.RepositoryUser;
 
 public class RepositoryUserFile implements RepositoryUser{
 
 	private List<User> users;
-	private static final String filename = "bin\\files\\users.txt"; 
+	private static final String filename = "files/users.txt";
 	
 	public RepositoryUserFile() throws Exception 
 	{
