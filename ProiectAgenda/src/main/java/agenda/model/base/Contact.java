@@ -2,6 +2,9 @@ package agenda.model.base;
 
 import agenda.exceptions.InvalidFormatException;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Contact {
 	private String Name;
 	private String Address;
@@ -74,10 +77,8 @@ public class Contact {
 	
 	private static boolean validName(String str)
 	{
-		
-		String[] s = str.split("[\\p{Punct}\\s]+");
-		if (s.length>2) return false;
-		return true;
+		if (str.length()<=2) return false;
+		return str.matches("^[A-Za-z]*");
 	}
 	
 	private static boolean validAddress(String str)
@@ -87,11 +88,8 @@ public class Contact {
 	
 	private static boolean validTelefon(String tel)
 	{
-		String[] s = tel.split("[\\p{Punct}\\s]+");
-		if (tel.charAt(0) == '+' && s.length == 2 ) return true;
-		if (tel.charAt(0) != '0')return false;
-		if (s.length != 1) return false;
-		return true;
+		if (tel.length()!=10) return false;
+		return tel.matches("[0-9]*?");
 	}
 	
 		

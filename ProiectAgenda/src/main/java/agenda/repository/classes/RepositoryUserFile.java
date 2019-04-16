@@ -1,16 +1,11 @@
 package agenda.repository.classes;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.LinkedList;
-import java.util.List;
-
 import agenda.model.base.User;
 import agenda.repository.interfaces.RepositoryUser;
+
+import java.io.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class RepositoryUserFile implements RepositoryUser{
 
